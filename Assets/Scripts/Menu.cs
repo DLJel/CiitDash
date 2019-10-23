@@ -12,6 +12,7 @@ public class Menu : MonoBehaviour
 	public GameObject tutorial;
 	private int switchindex;
 	private static Menu instance;
+	public AudioClip hoverButton;
 
 	public static Menu Instance
 	{
@@ -86,7 +87,7 @@ public class Menu : MonoBehaviour
 		Application.Quit ();
 
 	}
-
+		
 	public void MenuFuncs()
 	{
 		switch (switchindex) 

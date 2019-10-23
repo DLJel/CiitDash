@@ -53,10 +53,12 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Bells.cs" />
      <Compile Include="Assets\Scripts\Book.cs" />
+     <Compile Include="Assets\Scripts\ButtonSound.cs" />
      <Compile Include="Assets\Scripts\Chair.cs" />
      <Compile Include="Assets\Scripts\FadeEffect.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
+     <Compile Include="Assets\Scripts\SoundsFX.cs" />
      <Compile Include="Assets\Scripts\SpawnStudents.cs" />
      <Compile Include="Assets\Scripts\Student.cs" />
      <Compile Include="Assets\Scripts\Table.cs" />
