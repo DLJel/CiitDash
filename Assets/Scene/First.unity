@@ -3099,6 +3099,7 @@ MonoBehaviour:
   mainButtons: {fileID: 0}
   book: {fileID: 0}
   tutorial: {fileID: 0}
+  hoverButton: {fileID: 0}
 --- !u!1001 &1519866869
 Prefab:
   m_ObjectHideFlags: 0
