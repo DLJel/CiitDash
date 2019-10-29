@@ -11,17 +11,14 @@ public class Student : MonoBehaviour {
 	public Slider noiseBar;
 	public GameObject table, canvas;
 	public Table tableScript;
-	public bool activitySwitch = false;
+	public bool activitySwitch = false, facingRight, selected, isSeated, firstInLine = false;
 	private float noiseratefloat;
 	private IEnumerator coroutine;
-	public bool selected;
 	public float moveSpeed;
 	public float offset = 0.05f;
-	public bool isSeated;
 	public Sprite standingPose;
 	public Sprite[] sittingPose;
 	public SpriteRenderer renderer;
-	public bool facingRight;
 	public Image progressFill, noiseFill;
 	public GameObject chair;
 
@@ -99,7 +96,7 @@ public class Student : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-		if (!selected) 
+		if (!selected && firstInLine) 
 		{
 			selected = true;
 		}	
