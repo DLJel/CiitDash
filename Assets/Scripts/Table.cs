@@ -17,7 +17,7 @@ public class Table : MonoBehaviour {
 	public float counter, maxCounter = 10f;
 	public Chair[] chairscript;
 	private bool allfalse = false;
-	public GameObject tutIndic;
+	public GameObject tutIndic, tutArrows;
 	public Canvas canvas;
 
 	void Start () 
@@ -175,6 +175,7 @@ public class Table : MonoBehaviour {
 			TutorialScript.Instance.tutIndex++;
 			TutorialScript.Instance.pressed = true;
 			TutorialScript.Instance.pressTableFinished = true;
+			TutorialScript.Instance.DisciplineTimer ();
 		}
 	}
 

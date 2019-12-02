@@ -212,6 +212,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1350273830665868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4610067989982140}
+  - component: {fileID: 212263094391511462}
+  m_Layer: 0
+  m_Name: Tutorial Arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1370168826270068
 GameObject:
   m_ObjectHideFlags: 1
@@ -654,6 +670,19 @@ Transform:
   m_Father: {fileID: 4015403477713516}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4610067989982140
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1350273830665868}
+  m_LocalRotation: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: 0.25, y: 1, z: 0}
+  m_LocalScale: {x: 1.7313797, y: 1.7313796, z: 2.46117}
+  m_Children: []
+  m_Father: {fileID: 4871057616862702}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!4 &4871057616862702
 Transform:
   m_ObjectHideFlags: 1
@@ -661,11 +690,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1337838196051232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9918944, y: -3.477218, z: 0}
+  m_LocalPosition: {x: -8.564321, y: -1.2989514, z: 0}
   m_LocalScale: {x: 1.5, y: 1.4999999, z: 1}
   m_Children:
   - {fileID: 224307269913513164}
   - {fileID: 4015403477713516}
+  - {fileID: 4610067989982140}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1447,7 +1477,7 @@ MonoBehaviour:
   progressBar: {fileID: 114610728566292704}
   noiseBar: {fileID: 114858438388021280}
   table: {fileID: 0}
-  canvas: {fileID: 1552946543793476}
+  tutorialArrow: {fileID: 1350273830665868}
   tableScript: {fileID: 0}
   activitySwitch: 1
   facingRight: 0
@@ -1469,6 +1499,8 @@ MonoBehaviour:
   noiseCircle: {fileID: 1215841900775640}
   tutIndic: {fileID: 1332111179076782}
   animator: {fileID: 0}
+  canvas: {fileID: 223630699645269604}
+  canvasObject: {fileID: 1552946543793476}
 --- !u!114 &114858438388021280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1696,6 +1728,48 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.04, y: 0.04}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!212 &212263094391511462
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1350273830665868}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300002, guid: 0b3af86cc1249a24b8e02fc33325b2de, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.26, y: 0.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

@@ -1,5 +1,5 @@
 WindowsStandalone
-1e409228dc7fd48399af5d9165c7372f Assembly-CSharp.dll:.TutorialScript
+cda7db7aeca0955861d7b5273184439f Assembly-CSharp.dll:.TutorialScript
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9f07aaefd0255462bb6e4f9e5da6b2d4 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -136,8 +136,8 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingRenderer
-f1d9ba4305d7ebc804fcfe083c1ddeeb Assembly-CSharp.dll:.Table
-a8fa7d4e658bde0cbda8c88025c6939b Assembly-CSharp.dll:.Student
+3a5103fcfdb94ef6efa0ce9de372b809 Assembly-CSharp.dll:.Table
+3f26e4641379f472873476f2af7d8dd7 Assembly-CSharp.dll:.Student
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SoundsFX
 3cc899463fc1fe1947adecbfe2ee8b66 Assembly-CSharp.dll:.ButtonSound
 2a53010adcb868f95e7192fe1068565c Assembly-CSharp.dll:.Thoughts

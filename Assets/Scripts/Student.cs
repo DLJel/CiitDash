@@ -9,7 +9,7 @@ public class Student : MonoBehaviour {
 	public float progressRate;
 	public Slider progressBar;
 	public Slider noiseBar;
-	public GameObject table, canvas;
+	public GameObject table, tutorialArrow;
 	public Table tableScript;
 	public bool activitySwitch = false, facingRight, selected, isSeated, firstInLine = false, playAnimation;
 	private float noiseratefloat;
@@ -22,6 +22,8 @@ public class Student : MonoBehaviour {
 	public Image progressFill, noiseFill;
 	public GameObject chair, progressCircle, noiseCircle, tutIndic;
 	public Animator animator;
+	public Canvas canvas;
+	public GameObject canvasObject;
 
 	void Start () 
 	{

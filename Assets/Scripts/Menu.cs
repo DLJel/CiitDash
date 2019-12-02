@@ -46,7 +46,7 @@ public class Menu : MonoBehaviour
 			isPaused = true;
 			foreach (GameObject stud in student) 
 			{
-				stud.GetComponent<Student>().canvas.SetActive (false);
+				stud.GetComponent<Student>().canvasObject.SetActive (false);
 			}
 			Time.timeScale = 0;
 		}
@@ -57,7 +57,7 @@ public class Menu : MonoBehaviour
 			Time.timeScale = 1;
 			foreach (GameObject stud in student) 
 			{
-				stud.GetComponent<Student>().canvas.SetActive (true);
+				stud.GetComponent<Student>().canvasObject.SetActive (true);
 			}
 		}
 	}
