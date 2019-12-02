@@ -4,12 +4,29 @@ using UnityEngine;
 
 public class Book : MonoBehaviour 
 {
-	public GameObject buttons;
+	public GameObject buttons, buttons1;
 	public Animator bookAnim;
 
 	void Start()
 	{
+		Time.timeScale = 1;
+		bookAnim.Play ("Book");
+		MainAnim ();
+	}
+
+	void AnimationShowButton()
+	{
+		buttons.SetActive (true);
+		buttons1.SetActive (true);
+	}
+	// Update is called once per frame
+	void Update () 
+	{
 		
+	}
+
+	void MainAnim()
+	{
 		AnimationClip clip;
 		AnimationEvent evt;
 		evt = new AnimationEvent ();
@@ -18,15 +35,5 @@ public class Book : MonoBehaviour
 		evt.functionName = "AnimationShowButton";
 		clip = bookAnim.runtimeAnimatorController.animationClips[0];
 		clip.AddEvent (evt);
-	}
-
-	void AnimationShowButton()
-	{
-		buttons.SetActive (true);
-	}
-	// Update is called once per frame
-	void Update () 
-	{
-		
 	}
 }

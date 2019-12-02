@@ -11,7 +11,7 @@ public class Student : MonoBehaviour {
 	public Slider noiseBar;
 	public GameObject table, canvas;
 	public Table tableScript;
-	public bool activitySwitch = false, facingRight, selected, isSeated, firstInLine = false;
+	public bool activitySwitch = false, facingRight, selected, isSeated, firstInLine = false, playAnimation;
 	private float noiseratefloat;
 	private IEnumerator coroutine;
 	public float moveSpeed;
@@ -20,19 +20,33 @@ public class Student : MonoBehaviour {
 	public Sprite[] sittingPose;
 	public SpriteRenderer renderer;
 	public Image progressFill, noiseFill;
-	public GameObject chair;
+	public GameObject chair, progressCircle, noiseCircle, tutIndic;
+	public Animator animator;
 
 	void Start () 
 	{
+		animator = GetComponent<Animator> ();
 		renderer = GetComponent<SpriteRenderer> ();
 		coroutine = AddNoise();
 		selected = false;
 		isSeated = false;
+		progressCircle.gameObject.SetActive (false);
+		noiseCircle.gameObject.SetActive (false);
 //		BeginStudent ();
 	}
 
 	void Update () 
 	{
+//		animator.SetBool("IsSeated", isSeated);
+		if (isSeated && !selected) 
+		{
+			progressCircle.gameObject.SetActive (true);
+			noiseCircle.gameObject.SetActive (true);
+		}
+		if (TutorialScript.Instance.isTutorialOn && isSeated && !selected && table != null) 
+		{
+			TutorialScript.Instance.tutTable = table;
+		}
 //		if (progressBar.value == 100) 
 //		{
 //			if (tableScript.isRunning) 
@@ -70,23 +84,35 @@ public class Student : MonoBehaviour {
 		else if (selected) 
 		{
 			selected = false;
-			Debug.Log ("Selected");
+//			Debug.Log ("Selected");
 		}
 		if (isSeated) 
 		{
+			animator.Play ("Sitting");
 			if (facingRight) 
 			{
-				renderer.sprite = sittingPose [0];
+//				renderer.sprite = sittingPose [0];
+				renderer.flipX = false;
+				renderer.sprite = standingPose;
+//				playAnimation = true;
 			} 
 			else 
 			{
-				renderer.sprite = sittingPose [1];
+//				renderer.sprite = sittingPose [1];
+				renderer.flipX = true;
+				renderer.sprite = standingPose;
+//				playAnimation = true;
 			}
 		} 
 		else 
 		{
 			renderer.sprite = standingPose;
+			animator.Play ("Idle");
 		}
+//		if (playAnimation) 
+//		{
+//			animator.Play ("Man2Sitting");
+//		}
 	}
 
 //	void OnTriggerEnter2D(Collider2D col)

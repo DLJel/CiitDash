@@ -64,6 +64,8 @@
      <Compile Include="Assets\Scripts\Table.cs" />
      <Compile Include="Assets\Scripts\ThoughtBubble.cs" />
      <Compile Include="Assets\Scripts\Thoughts.cs" />
+     <Compile Include="Assets\Scripts\TutDialogue.cs" />
+     <Compile Include="Assets\Scripts\TutorialScript.cs" />
      <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

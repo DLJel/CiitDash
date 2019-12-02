@@ -38,7 +38,7 @@ public class SpawnStudents : MonoBehaviour
 		{
 			canSpawn = true;
 		}
-		if (studentsInWaiting[0] != null && studentsInWaiting [0].GetComponent<Student> ().isSeated) 
+		if (studentsInWaiting[0] != null && studentsInWaiting [0].GetComponent<Student> ().isSeated || studentsInWaiting [0] == null && studentsInWaiting [1] != null) 
 		{
 			studentsInWaiting [0] = null;
 			spawnIndex--;
@@ -57,6 +57,10 @@ public class SpawnStudents : MonoBehaviour
 		{
 			studentsInWaiting [0].GetComponent<Student> ().firstInLine = true;
 		}
+//		if (studentsInWaiting [0] == null && studentsInWaiting [1] != null) 
+//		{
+//			
+//		}
 	}
 
 	public void SpawnAStudent()
@@ -66,5 +70,9 @@ public class SpawnStudents : MonoBehaviour
 		studentsInWaiting[spawnIndex] = Instantiate (students [index], spawnArea[spawnIndex].transform.position, Quaternion.identity) as GameObject;
 		spawnIndex++;
 //		spawnoffset.x = spawnoffset.x + .50f;
+//		if (TutorialScript.Instance.isTutorialOn) 
+//		{
+//			TutorialScript.Instance.DragNDrop ();
+//		}
 	}
 }
